@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item Active">
+    <a class="nav-link home" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+  </li>
+  <li class="nav-item Active">
+    <a class="nav-link" [routerLink]="['cenzor']" routerLinkActive="router-link-active">Cenzor</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['users-list']" routerLinkActive="router-link-active">Users-list</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['task-list']" routerLinkActive="router-link-active">Task-list</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

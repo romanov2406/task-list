@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class="modal-body">
+    Name:
+    <input type="text" [(ngModel)]="name" name="name" class="form-control" aria-label="Amount (to the nearest dollar)">
+    Last Name:
+    <input type="text" [(ngModel)]="surrname" name="surrname" class="form-control"
+      aria-label="Amount (to the nearest dollar)">
+    Phone:
+    <input type="text" [(ngModel)]="number" name="number" class="form-control">
+
+    <button class="btn btn-success mt-3" *ngIf="!isHide" (click)="createUser()">Create User</button>
+    <button class="btn btn-primary mt-3" *ngIf="isHide" (click)="saveUser()">Save User</button>
+  </div>
+</div>
+<div class="container">
+  <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchField" name="searchField">
+</div>
+<app-users-table [users]="users" [searchField]="searchField" (edit)="messChild($event)" (delete)="messChildDel($event)">
+</app-users-table>

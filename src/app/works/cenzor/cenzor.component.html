@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <div class="content">
+      <h3>Bad Words: <span *ngFor="let elem of wordsCollection">{{elem}} </span> </h3>
+      <div class="content-top">
+        <input type="text" class="form-control" [class.red]="isRed" placeholder="Bad words" name="words" [(ngModel)]="words">
+        <button class="btn btn-warning" (click)="addWords()">Add</button>
+        <button class="btn btn-danger" (click)="reset()">Reset</button>
+      </div>
+      <div class="content-bottom">
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="area" rows="6"></textarea>
+        </div>
+        <button class="btn btn-success" (click)="cenzor()">Cenzor</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elem of users| search:searchField ;index as i">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{elem.name}}</td>
+        <td>{{elem.surrname}}</td>
+        <td>{{elem.number}}</td>
+        <td><button class="btn btn-warning" (click)="editUser(i)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteUser(i)">Delete</button></td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>

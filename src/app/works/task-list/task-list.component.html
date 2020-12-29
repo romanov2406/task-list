@@ -1,0 +1,9 @@
+<div class="container mt-4">
+    <h4>Plan your Day :)</h4>
+    <h3>Count of Task: {{arr.length}}</h3>
+    <div class="content1">
+      <input class="form-control" type="text" [(ngModel)]="parentText" [class.red]="isRed" name="parentText">
+      <button class="btn btn-warning" (click)="addTask()">Add</button>
+    </div>
+  </div>
+<app-create-task [arr]="arr"></app-create-task>
