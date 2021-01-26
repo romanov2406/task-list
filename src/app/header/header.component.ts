@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  counter  = 0
   constructor() { }
 
   ngOnInit(): void {
+  }
+  change():void{
+    this.counter++
+    console.log(this.counter);
+    
   }
 
 }
